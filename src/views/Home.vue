@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2>{{ msg }}</h2>
-    <h2>{{ count }}</h2>
+    <h2 class="qqq">{{ count }}</h2>
+    <el-button type="primary">按钮</el-button>
   </div>
 </template>
 
@@ -12,5 +13,8 @@ const msg = ref("Hello");
 const count = ref(710);
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+.qqq{
+  background: red;
+}
 </style>
