@@ -2,9 +2,8 @@
   <div>
     <!--使用 router-link 组件进行导航 -->
     <!--通过传递 `to` 来指定链接 -->
-    <!--`<router-link>` 将呈现一个带有正确 `href` 属性的 `<a>` 标签-->
-    <router-link to="/">Go to Home</router-link><br>
-    <router-link to="/about">Go to About</router-link>
+    <!-- <router-link to="/">Go to Home</router-link><br> -->
+    <!-- <router-link to="/about">Go to About</router-link> -->
     <router-view />
     </div>
 </template>
@@ -21,6 +20,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
