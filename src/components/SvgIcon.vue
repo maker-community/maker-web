@@ -20,7 +20,7 @@ export default defineComponent({
     },
     color: {
       type: String,
-      default: "#333",
+      default: "#232020",
     },
   },
   setup(props) {
@@ -29,3 +29,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.svg-icon{
+  width: 22px;
+  height: 22px;
+}
+/* .svg-icon:focus{
+  outline: none;
+} */
+</style>

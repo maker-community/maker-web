@@ -4,16 +4,39 @@
     <!--通过传递 `to` 来指定链接 -->
     <!-- <router-link to="/">Go to Home</router-link><br> -->
     <!-- <router-link to="/about">Go to About</router-link> -->
+    <Header></Header>
     <router-view />
-    </div>
+    <Footer></Footer>
+  </div>
 </template>
 
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+<script lang="ts">
+import { defineComponent, defineAsyncComponent } from "vue";
+// import { isMobileOrPc } from "./utils/utils";
+
+// 移动端 rem 单位适配
+// if (isMobileOrPc()) {
+//   // width * 100 / 750 = width / 7.5
+//   // 1rem = 100px
+//   var width = window.screen.width;
+//   window.document.getElementsByTagName("html")[0].style.fontSize =
+//     width / 7.5 + "px";
+// }
+
+export default defineComponent({
+  name: "Home",
+  components: {
+    Header: defineAsyncComponent(() => import("./components/Header.vue")),
+    Footer: defineAsyncComponent(() => import("./components/Footer.vue")),
+  },
+  setup() {
+    return {};
+  },
+});
 </script>
   
 <style>
+@import url(./styles/index.css);
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
