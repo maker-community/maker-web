@@ -2,10 +2,7 @@ body {
   padding: 0;
   margin: 0;
 }
-a {
-  text-decoration: none;
-}
-.common-layout{
+.common-layout {
   display: flex;
   flex-direction: row;
   align-items: center;

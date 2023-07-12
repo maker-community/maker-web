@@ -1,10 +1,16 @@
 
 <template>
   <div class="footer">
-    <el-text size="large" tag="b">创客空间全栈修炼 ©2018 Created by BiaoChenXuYing</el-text>
-    <div class="number">
-      <a href="http://www.beian.miit.gov.cn" target="_blank"
-        >粤ICP备18141506号</a
+    <el-text size="large" tag="b"
+      >创客空间全栈修炼 ©2018 Created by BiaoChenXuYing</el-text
+    >
+    <div>
+      <el-link
+        :underline="false"
+        href="http://www.beian.miit.gov.cn"
+        target="_blank"
+      >
+        粤ICP备18141506号</el-link
       >
     </div>
   </div>

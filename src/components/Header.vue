@@ -15,7 +15,10 @@
       <!-- <el-divider direction="vertical" /> -->
       <el-sub-menu index="2">
         <template #title>
-          <svg-icon name="translate" style="width: 15px"></svg-icon>
+          <el-link :underline="false">
+            <el-icon :size="16">
+              <svg-icon name="translate"></svg-icon> </el-icon
+          ></el-link>
         </template>
         <el-menu-item index="2-1">简体中文</el-menu-item>
         <el-menu-item index="2-2">English</el-menu-item>
@@ -26,7 +29,15 @@
       <!-- <el-divider direction="vertical" /> -->
       <el-switch v-model="isDark" @change="toggleDark" />
       <!-- <el-divider direction="vertical" /> -->
-      <svg-icon name="github" class="githubIcon"></svg-icon>
+      <el-link
+        :underline="false"
+        href="https://github.com/maker-community"
+        target="_blank"
+      >
+        <el-icon :size="20">
+          <svg-icon name="github" class="githubIcon"></svg-icon>
+        </el-icon>
+      </el-link>
     </el-menu>
   </div>
 </template>
