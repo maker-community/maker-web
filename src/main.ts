@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
+import i18n from './language/i18n'
 
 // 图标和组件需要分开引入
 import { ElButton } from "element-plus";
@@ -16,4 +17,5 @@ app.component("ElButton", ElButton);
 app.component("MoonNight", MoonNight);
 app.component("svg-icon", SvgIcon);
 
+app.use(i18n)
 app.use(router).mount("#app");
