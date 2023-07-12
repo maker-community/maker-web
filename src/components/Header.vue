@@ -13,15 +13,15 @@
       <el-menu-item index="0">详情</el-menu-item>
       <el-menu-item index="1">其他</el-menu-item>
       <!-- <el-divider direction="vertical" /> -->
-      <el-sub-menu index="2">
+      <el-sub-menu index="2" class="locale-menu">
         <template #title>
           <el-link :underline="false">
             <el-icon :size="16">
-              <svg-icon name="translate"></svg-icon> </el-icon
+              <svg-icon name="translate"></svg-icon></el-icon
           ></el-link>
         </template>
-        <el-menu-item index="2-1">简体中文</el-menu-item>
-        <el-menu-item index="2-2">English</el-menu-item>
+        <el-menu-item index="zh" v-if="locale ==='en'">简体中文</el-menu-item>
+        <el-menu-item index="en" v-else>English</el-menu-item>
       </el-sub-menu>
       <!-- <el-menu-item index="3">相关信息</el-menu-item> -->
       <!-- <el-menu-item index="4">相关信息</el-menu-item> -->
@@ -43,29 +43,41 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "Header",
   setup() {
     const isDark = useDark();
     const toggleDark = useToggle(isDark);
+    const { locale } = useI18n();
 
     const handleSelect = (key: string, keyPath: string[]) => {
-      console.log(key, keyPath);
+      keyPath[0] === "2" && (locale.value = key);
+      //补充：保存上一次的语言或者根据系统语言自动显示
+      // localStorage.setItem('lang', lang)
+
+      console.log('语言',locale.value);
+      return locale
     };
+
+    onMounted(()=>{
+      // console.log('34',);
+    })
 
     return {
       isDark,
       handleSelect,
       toggleDark,
+      locale
     };
   },
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .el-menu-demo {
   align-items: center;
   padding: 0 40px;
@@ -75,5 +87,8 @@ export default defineComponent({
 }
 .el-switch {
   margin: 0 28px 0 7px;
+}
+.locale-menu > ::v-deep .el-sub-menu__title {
+  border: none !important;
 }
 </style>

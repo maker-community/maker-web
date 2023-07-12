@@ -2,9 +2,7 @@
   <div>
     <div class="common-layout">
       <div>
-        <el-text class="text-title"
-          >The Blazor Component Library You always wanted</el-text
-        >
+        <el-text class="text-title">{{ $t("home.title") }}</el-text>
         <br />
         <el-text size="large" type="info" tag="b">
           Trusted by thousands of users, from hobby developers to large
@@ -24,6 +22,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "Home",
@@ -31,10 +30,12 @@ export default defineComponent({
   setup() {
     const msg = ref("Hello");
     const count = ref(710);
+    const { t } = useI18n();
 
     return {
       msg,
       count,
+      t,
     };
   },
 });
@@ -43,6 +44,6 @@ export default defineComponent({
 <style>
 .text-title {
   font-size: 4rem;
-  font-weight: 700; 
+  font-weight: 700;
 }
 </style>
