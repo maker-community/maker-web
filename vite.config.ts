@@ -14,6 +14,11 @@ dns.setDefaultResultOrder("verbatim");
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server:{
+    host:'0.0.0.0',//解决vite use--host to expose
+    port:5173,
+    open:true
+  },
   resolve: {
     alias: {
       "~/": `${path.resolve(__dirname, "src")}/`, //获取src文件下的路径

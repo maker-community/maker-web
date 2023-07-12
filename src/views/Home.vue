@@ -1,13 +1,16 @@
 <template>
   <div>
     <div class="common-layout">
-      <div class="home">
-        <h1>The Blazor Component Library You always wanted</h1>
-        <h6>
+      <div>
+        <el-text class="text-title"
+          >The Blazor Component Library You always wanted</el-text
+        >
+        <br />
+        <el-text size="large" type="info" tag="b">
           Trusted by thousands of users, from hobby developers to large
           enterprises. Use MudBlazor to rapidly build amazing web applications
           without leaving your loved C# language and toolchain.
-        </h6>
+        </el-text>
       </div>
       <div>
         <!-- <el-icon><MoonNight /></el-icon> -->
@@ -37,10 +40,9 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less" scoped>
-.home {
-  h1{
-    font-size: 50px;
-  }
+<style>
+.text-title {
+  font-size: 4rem;
+  font-weight: 700; 
 }
 </style>

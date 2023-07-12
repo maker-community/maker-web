@@ -1,7 +1,11 @@
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+// 拓展：在sass中，@forward 相当于中转站，通过@forward引入scss文件并将引入scss文件中的变量、混合、函数等抛出，当其他scss文件用@use引入此模块时可使用，一般在开源项目中使用较多；
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
   $colors: (
-    'primary': (
-      'base': #747bff,
+    "primary": (
+      "base": #747bff,
     ),
   ),
+  $text-color: (
+    "regular": #3c3c43eb,
+  )
 );
