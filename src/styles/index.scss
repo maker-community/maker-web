@@ -1,12 +1,20 @@
-// 拓展：在sass中，@forward 相当于中转站，通过@forward引入scss文件并将引入scss文件中的变量、混合、函数等抛出，当其他scss文件用@use引入此模块时可使用，一般在开源项目中使用较多；
-@forward "element-plus/theme-chalk/src/common/var.scss" with (
-  $colors: (
-    "primary": (
-      "base": #747bff,
-    ),
-  ),
-  $text-color: (
-    // "primary": #424242,
-    "regular": #3c3c43eb,
-  )
-);
+html {
+  /* rem单位会相对根元素 <html>标签，一般浏览器默认 1rem = 16px */
+  font-size: 16px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.common-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+@media (max-width: 836px) {
+  html {
+      font-size: 10px;
+  }
+}

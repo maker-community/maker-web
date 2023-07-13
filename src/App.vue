@@ -36,7 +36,7 @@ export default defineComponent({
 </script>
   
 <style>
-@import url(./styles/index.css);
+@import url(./styles/index.scss);
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -17,14 +17,15 @@
         <template #title>
           <el-link :underline="false">
             <el-icon :size="16">
-              <svg-icon name="translate"></svg-icon></el-icon
-          ></el-link>
+              <svg-icon name="translate"></svg-icon>
+            </el-icon>
+          </el-link>
         </template>
-        <el-menu-item index="zh" v-if="locale ==='en'">简体中文</el-menu-item>
+        <el-menu-item index="zh" v-if="locale === 'en'">简体中文</el-menu-item>
         <el-menu-item index="en" v-else>English</el-menu-item>
       </el-sub-menu>
-      <!-- <el-menu-item index="3">相关信息</el-menu-item> -->
-      <!-- <el-menu-item index="4">相关信息</el-menu-item> -->
+      <!-- <el-menu-item index="3">相关信息</el-menu-item>
+      <el-menu-item index="4">相关信息</el-menu-item> -->
 
       <!-- <el-divider direction="vertical" /> -->
       <el-switch v-model="isDark" @change="toggleDark" />
@@ -35,7 +36,7 @@
         target="_blank"
       >
         <el-icon :size="20">
-          <svg-icon name="github" class="githubIcon"></svg-icon>
+          <svg-icon name="github"></svg-icon>
         </el-icon>
       </el-link>
     </el-menu>
@@ -59,19 +60,19 @@ export default defineComponent({
       //补充：保存上一次的语言或者根据系统语言自动显示
       // localStorage.setItem('lang', lang)
 
-      console.log('语言',locale.value);
-      return locale
+      // console.log("语言", locale.value);
+      return locale;
     };
 
-    onMounted(()=>{
+    onMounted(() => {
       // console.log('34',);
-    })
+    });
 
     return {
       isDark,
       handleSelect,
       toggleDark,
-      locale
+      locale,
     };
   },
 });
@@ -80,7 +81,8 @@ export default defineComponent({
 <style scoped lang="scss">
 .el-menu-demo {
   align-items: center;
-  padding: 0 40px;
+  padding: 0 3.5rem;
+  // background: var(--el-color-primary);
 }
 .flex-grow {
   flex-grow: 1;
@@ -88,7 +90,12 @@ export default defineComponent({
 .el-switch {
   margin: 0 28px 0 7px;
 }
-.locale-menu > ::v-deep .el-sub-menu__title {
-  border: none !important;
+.locale-menu::v-deep {
+  .el-sub-menu__title {
+    border: none;
+  }
+  .el-sub-menu__title:hover {
+    background: none;
+  }
 }
 </style>

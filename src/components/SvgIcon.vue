@@ -1,7 +1,7 @@
 <template>
   <svg aria-hidden="true" class="svg-icon">
     <use :xlink:href="symbolId" />
-    <!--  :fill="color" -->
+     <!-- :fill="color" -->
   </svg>
 </template>
 
@@ -33,10 +33,7 @@ export default defineComponent({
 
 <style>
 .svg-icon{
-  width: 22px;
-  height: 22px;
+  width: 1rem;
+  height: 1rem;
 }
-/* .svg-icon:focus{
-  outline: none;
-} */
 </style>

@@ -10,31 +10,22 @@
           without leaving your loved C# language and toolchain.
         </el-text>
       </div>
-      <div>
-        <!-- <el-icon><MoonNight /></el-icon> -->
-      </div>
+      <div></div>
     </div>
-    <!-- <h2>{{ msg }}</h2>
-    <h2 class="qqq">{{ count }}</h2>
-    <el-button type="primary">按钮</el-button> -->
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue";
+import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "Home",
   components: {},
   setup() {
-    const msg = ref("Hello");
-    const count = ref(710);
     const { t } = useI18n();
 
     return {
-      msg,
-      count,
       t,
     };
   },
