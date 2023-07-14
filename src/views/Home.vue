@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="common-layout">
+    <div class="container">
       <div>
         <el-text class="text-title">{{ $t("home.title") }}</el-text>
         <br />
-        <el-text size="large" type="info" tag="b">
-          Trusted by thousands of users, from hobby developers to large
-          enterprises. Use MudBlazor to rapidly build amazing web applications
-          without leaving your loved C# language and toolchain.
+        <el-text size="large" type="info" tag="b"
+          >{{ $t("home.subtitle") }}
         </el-text>
       </div>
-      <div></div>
+      <div class="main-image">
+        <img src="../assets/Images/HomePage.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -36,5 +36,22 @@ export default defineComponent({
 .text-title {
   font-size: 4rem;
   font-weight: 700;
+}
+.main-image {
+  width: 100rem;
+  margin-left: 4rem;
+  padding: 0.5rem 0.5rem 0.2rem;
+  /* animation: spin 5s reverse infinite; */
+  background-image: linear-gradient(
+    45deg,
+    rgba(89, 74, 226, 0.5),
+    rgba(255, 64, 129, 0.5) 43%,
+    rgba(116, 103, 239, 0.5)
+  );
+  border-radius: 20px;
+}
+img {
+  width: 100%;
+  border-radius: 15px;
 }
 </style>

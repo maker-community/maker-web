@@ -2,15 +2,15 @@
 <template>
   <div class="footer">
     <el-text size="large" tag="b"
-      >创客空间全栈修炼 ©2018 Created by BiaoChenXuYing</el-text
+      >创客空间 ©2020 Created by Gil Zhang</el-text
     >
     <div>
       <el-link
         :underline="false"
-        href="http://www.beian.miit.gov.cn"
+        href="https://github.com/maker-community"
         target="_blank"
       >
-        粤ICP备18141506号</el-link
+      Join in Hacker space</el-link
       >
     </div>
   </div>

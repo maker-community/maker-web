@@ -1,20 +1,24 @@
 html {
   /* rem单位会相对根元素 <html>标签，一般浏览器默认 1rem = 16px */
   font-size: 16px;
+  background-color: var(--el-menu-bg-color);
 }
 body {
   padding: 0;
   margin: 0;
 }
-.common-layout {
+.container {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: left;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  max-width: 1152px;
 }
 
 @media (max-width: 836px) {
   html {
-      font-size: 10px;
+    font-size: 10px;
   }
 }

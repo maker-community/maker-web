@@ -58,9 +58,7 @@ export default defineComponent({
     const handleSelect = (key: string, keyPath: string[]) => {
       keyPath[0] === "2" && (locale.value = key);
       //补充：保存上一次的语言或者根据系统语言自动显示
-      // localStorage.setItem('lang', lang)
-
-      // console.log("语言", locale.value);
+      localStorage.setItem('lang', key)
       return locale;
     };
 
