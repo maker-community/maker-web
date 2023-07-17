@@ -1,17 +1,13 @@
 <template>
   <div>
-    <el-menu
-      class="el-menu-demo"
-      mode="horizontal"
-      :ellipsis="false"
-      @select="handleSelect"
-    >
+    <el-menu class="el-menu-demo" mode="horizontal" @select="handleSelect">
       <!-- <img class="logo" src="../assets/logo.jpg" alt="" /> -->
-      <el-text size="large" tag="b">创客空间</el-text>
+      <el-icon :size="40"><PictureRounded /></el-icon>
+      <el-text size="large" tag="b">{{ $t("header.logo") }}</el-text>
 
       <div class="flex-grow" />
-      <el-menu-item index="0">详情</el-menu-item>
-      <el-menu-item index="1">其他</el-menu-item>
+      <el-menu-item index="0">{{ $t("header.menu_detail") }}</el-menu-item>
+      <el-menu-item index="1">{{ $t("header.menu_other") }}</el-menu-item>
       <!-- <el-divider direction="vertical" /> -->
       <el-sub-menu index="2" class="locale-menu">
         <template #title>
@@ -24,7 +20,7 @@
         <el-menu-item index="zh" v-if="locale === 'en'">简体中文</el-menu-item>
         <el-menu-item index="en" v-else>English</el-menu-item>
       </el-sub-menu>
-      <!-- <el-menu-item index="3">相关信息</el-menu-item>
+      <!-- <el-menu-item index="3">详细信息</el-menu-item>
       <el-menu-item index="4">相关信息</el-menu-item> -->
 
       <!-- <el-divider direction="vertical" /> -->
@@ -36,7 +32,7 @@
         target="_blank"
       >
         <el-icon :size="20">
-          <svg-icon name="github"></svg-icon>
+          <svg-icon name="github" class="githubIcon"></svg-icon>
         </el-icon>
       </el-link>
     </el-menu>
@@ -57,8 +53,10 @@ export default defineComponent({
 
     const handleSelect = (key: string, keyPath: string[]) => {
       keyPath[0] === "2" && (locale.value = key);
-      //补充：保存上一次的语言或者根据系统语言自动显示
-      localStorage.setItem('lang', key)
+      keyPath[1] === "2" && (locale.value = key);
+      localStorage.setItem("lang", key);
+
+      // console.log("语言", key, keyPath);
       return locale;
     };
 
@@ -79,21 +77,27 @@ export default defineComponent({
 <style scoped lang="scss">
 .el-menu-demo {
   align-items: center;
-  padding: 0 3.5rem;
-  // background: var(--el-color-primary);
+  padding-left: 3rem;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  background-color:var(--el-menu-bg-color);
 }
 .flex-grow {
-  flex-grow: 1;
+  flex-grow: 0.95;
 }
 .el-switch {
   margin: 0 28px 0 7px;
 }
-.locale-menu::v-deep {
-  .el-sub-menu__title {
-    border: none;
-  }
-  .el-sub-menu__title:hover {
+
+.locale-menu,
+.el-sub-menu__hide-arrow {
+  & > :deep .el-sub-menu__title:hover {
     background: none;
   }
+
+  // & > :deep .el-sub-menu__title {
+  //   border: none !important;
+  // }
 }
 </style>
