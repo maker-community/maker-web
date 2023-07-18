@@ -67,7 +67,7 @@
       </el-row>
     </div>
 
-    <!-- 内容 -->    
+    <!-- 内容 -->
     <el-divider style="margin: 0">
       <el-text type="info">{{ $t("home_content.about_product") }}</el-text>
     </el-divider>
@@ -102,7 +102,7 @@
       </el-row>
     </div>
 
-    <div class="container" style="background-color: #c64af114;">
+    <div class="container" style="background-color: var(--el-color-primary-light-9)">
       <el-row :gutter="20" justify="space-between" align="middle">
         <el-col :xl="13" :lg="13" :md="13">
           <el-text style="font-size: 2.5rem; font-weight: 600">
@@ -162,11 +162,6 @@
       </el-row>
     </div>
 
-    <!-- 加入我们 -->
-    <el-divider style="margin: 0">
-      <el-text type="info">{{ $t("home_content.join") }}</el-text>
-    </el-divider>
-
     <div class="container">
       <el-row :gutter="20" justify="space-between" align="middle">
         <el-col :xl="13" :lg="13" :md="13">
@@ -193,6 +188,41 @@
           <!-- <div class="title-image"> -->
           <img src="../assets/Images/HomePage.png" alt="" />
           <!-- </div> -->
+        </el-col>
+      </el-row>
+    </div>
+
+    <!-- 加入我们 -->
+    <el-divider style="margin: 0">
+      <el-text type="info">{{ $t("home_content.join") }}</el-text>
+    </el-divider>
+
+    <div class="container">
+      <el-row :gutter="20" justify="space-between" align="middle">
+        <el-col :xl="10" :lg="10" :md="10">
+          <!-- <div class="title-image"> -->
+          <img src="../assets/Images/HomePage.png" alt="" />
+          <!-- </div> -->
+        </el-col>
+
+        <el-col :xl="13" :lg="13" :md="13">
+          <el-text style="font-size: 2.5rem; font-weight: 600">
+            {{ $t("home_content.electron_bot") }}
+          </el-text>
+          <br /><br />
+          <el-text size="large" type="info"
+            >{{ $t("home_content.electron_bot_details") }}
+          </el-text>
+          <br /><br />
+          <el-link
+            :underline="false"
+            href="https://github.com/maker-community/ElectronBot.DotNet"
+            target="_blank"
+          >
+            <el-text type="primary"
+              >{{ $t("home_content.details_link") }}
+            </el-text>
+          </el-link>
         </el-col>
       </el-row>
     </div>
