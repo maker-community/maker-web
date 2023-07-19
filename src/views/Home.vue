@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 60px">
+  <div class="main">
     <!-- 标题 -->
     <div class="container">
       <el-row justify="space-between" align="middle">
@@ -102,34 +102,36 @@
       </el-row>
     </div>
 
-    <div class="container" style="background-color: var(--el-color-primary-light-9)">
-      <el-row :gutter="20" justify="space-between" align="middle">
-        <el-col :xl="13" :lg="13" :md="13">
-          <el-text style="font-size: 2.5rem; font-weight: 600">
-            {{ $t("home_content.eShop") }}
-          </el-text>
-          <br /><br />
-          <el-text size="large" type="info"
-            >{{ $t("home_content.eShop_details") }}
-          </el-text>
-          <br /><br />
-          <el-link
-            :underline="false"
-            href="https://github.com/maker-community/Verdure.eShop"
-            target="_blank"
-          >
-            <el-text type="primary"
-              >{{ $t("home_content.details_link") }}
+    <div style="background-color: var(--el-color-primary-light-9)">
+      <div class="container">
+        <el-row :gutter="20" justify="space-between" align="middle">
+          <el-col :xl="13" :lg="13" :md="13">
+            <el-text style="font-size: 2.5rem; font-weight: 600">
+              {{ $t("home_content.eShop") }}
             </el-text>
-          </el-link>
-        </el-col>
+            <br /><br />
+            <el-text size="large" type="info"
+              >{{ $t("home_content.eShop_details") }}
+            </el-text>
+            <br /><br />
+            <el-link
+              :underline="false"
+              href="https://github.com/maker-community/Verdure.eShop"
+              target="_blank"
+            >
+              <el-text type="primary"
+                >{{ $t("home_content.details_link") }}
+              </el-text>
+            </el-link>
+          </el-col>
 
-        <el-col :xl="10" :lg="10" :md="10">
-          <!-- <div class="title-image"> -->
-          <img src="../assets/Images/HomePage.png" alt="" />
-          <!-- </div> -->
-        </el-col>
-      </el-row>
+          <el-col :xl="10" :lg="10" :md="10">
+            <!-- <div class="title-image"> -->
+            <img src="../assets/Images/HomePage.png" alt="" />
+            <!-- </div> -->
+          </el-col>
+        </el-row>
+      </div>
     </div>
 
     <div class="container">
@@ -271,6 +273,6 @@ img {
   margin-left: 1rem;
 }
 .el-col {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 </style>

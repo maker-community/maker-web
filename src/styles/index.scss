@@ -10,12 +10,16 @@ body {
   padding: 0;
   margin: 0;
 }
+.main {
+  padding-top: 7rem;
+}
 .container {
   text-align: left;
-  padding: 5rem 7rem 5rem;
-  /* 
   margin: 0 auto;
-  max-width: 1152px;
+  max-width: 1280px;
+  padding: 5rem 2rem;
+  /* 
+  min-width: 100px;
    display: flex;
   flex-direction: row;
   align-items: center; 
@@ -24,9 +28,26 @@ body {
     word-break: break-word;
   }
 }
+.footer {
+  height: 40rem;
+  overflow: hidden;
+  margin-top: -10rem;
+}
+.skew-background {
+  padding-top: 11rem;
+  height: 40rem;
+}
 
 @media (max-width: 836px) {
   html {
-    font-size: 10px;
+    font-size: 11px;
+  }
+  .footer {
+    height: 56rem;
+    margin-top: -10rem;
+  }
+  .skew-background {
+    padding-top: 9rem;
+    height: 45rem;
   }
 }
