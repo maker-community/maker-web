@@ -18,12 +18,6 @@ body {
   margin: 0 auto;
   max-width: 1280px;
   padding: 5rem 2rem;
-  /* 
-  min-width: 100px;
-   display: flex;
-  flex-direction: row;
-  align-items: center; 
-   */
   .el-text {
     word-break: break-word;
   }
@@ -36,6 +30,24 @@ body {
 .skew-background {
   padding-top: 11rem;
   height: 40rem;
+}
+
+&::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 8px;
+  height: 8px;
+}
+
+&::-webkit-scrollbar-thumb {
+  /*滚动条里面的滑块*/
+  border-radius: 2px;
+  background: #c4c4c4;
+}
+
+&::-webkit-scrollbar-track {
+  /*滚动条里面轨道背景*/
+  border-radius: 2px;
+  background: var(--el-fill-color-blank);
 }
 
 @media (max-width: 836px) {
