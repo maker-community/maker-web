@@ -3,6 +3,7 @@
     <Header></Header>
     <router-view />
     <Footer></Footer>
+    <el-backtop :right="50" :bottom="50" style="border: 2px solid;"/>
   </div>
 </template>
 
