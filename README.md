@@ -41,7 +41,8 @@ yarn dev
 ```
 # Compiles and minifies for production
 yarn build
+```
 
-## Build Setup 
+## 文档教程
 
 项目具体做法：[https://juejin.cn/post/7258896295616659514](https://juejin.cn/post/7258896295616659514)
