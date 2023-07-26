@@ -25,7 +25,7 @@
 
         <el-col :xl="12" :lg="12" :md="12">
           <div class="title-image">
-            <img src="../assets/Images/HomePage.png" alt="" />
+            <img src="../assets/Images/home-image.jpg" alt="" />
           </div>
         </el-col>
       </el-row>

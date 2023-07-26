@@ -1,13 +1,13 @@
 export default {
   header: {
-    logo: "创客空间",
+    logo: "创客社区",
     menu_detail: "详细",
     menu_other: "其他",
   },
   home: {
     title: "欢迎加入创客社区!",
     subtitle:
-      "maker-community是一个开源的创客社区，旨在为创客提供一个交流、学习和分享的平台。该社区的主要目标是为创客提供一个开放、自由的环境，以便他们可以共同探索和实现他们的想法。社区成员可以在这里分享他们的项目、经验和知识，并与其他创客互动。",
+      "Maker Community是一个开源的创客社区，旨在为创客提供一个交流、学习和分享的平台。该社区的主要目标是为创客提供一个开放、自由的环境，以便他们可以共同探索和实现他们的想法。社区成员可以在这里分享他们的项目、经验和知识，并与其他创客互动。",
     start: "加入我们",
     toGithub: "查看 GitHub 社区",
   },
@@ -17,7 +17,7 @@ export default {
     contact: "一对一沟通",
   },
   home_content: {
-    about_product:'关于产品',
+    about_product:'社区项目',
     details_link: "立即查看详情 >",
     electron_bot: "电子脑壳",
     electron_bot_details:

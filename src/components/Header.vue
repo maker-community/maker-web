@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-menu class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <!-- <img class="logo" src="../assets/logo.jpg" alt="" /> -->
-      <el-icon :size="40"><PictureRounded /></el-icon>
+      <img class="logo" src="../assets/Images/app-icon.png" width="40" height="40" alt="" />
+      <!-- <el-icon :size="40"><PictureRounded /></el-icon> -->
       <el-text size="large" tag="b">{{ $t("header.logo") }}</el-text>
 
       <div class="flex-grow" />
@@ -99,5 +99,12 @@ export default defineComponent({
   // & > :deep .el-sub-menu__title {
   //   border: none !important;
   // }
+}
+
+.logo{
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin-right: 4px;
 }
 </style>

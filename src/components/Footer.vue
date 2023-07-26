@@ -4,7 +4,8 @@
     <div class="skew-background">
       <div class="footer-content">
         <p>
-          <el-icon :size="35"><PictureRounded /></el-icon>
+           <img class="logo" src="../assets/Images/app-icon.png" width="35" height="35" alt="" />
+          <!-- <el-icon :size="35"><PictureRounded /></el-icon> -->
           <el-text size="large" tag="b" style="line-height: 20px">{{
             $t("header.logo")
           }}</el-text>
@@ -27,7 +28,7 @@
           </el-col> </el-row
         ><br />
         <el-text size="large" tag="b"
-          >Copyright ©2022-2023 Created by Maker-community</el-text
+          >Copyright ©2022-2023 Created by Maker Community</el-text
         >
         <br />
         <!-- <el-link
@@ -73,5 +74,13 @@ export default defineComponent({
   .el-col {
     padding-bottom: 1rem;
   }
+}
+
+.logo{
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin-right: 4px;
+  vertical-align: middle;
 }
 </style>
