@@ -8,7 +8,7 @@
 
 ## 效果
 
-完整效果请看：[http://www.douwp.club/](http://www.douwp.club/)
+完整效果请看：https://maker-community.github.io/maker-web/
 
 ## 前端主要技术 
 
