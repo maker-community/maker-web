@@ -15,7 +15,8 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/maker-web/'),
+  //history: createWebHistory('/maker-web/'),
+  history: createWebHistory(),
   routes,
 });
 
