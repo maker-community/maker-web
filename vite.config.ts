@@ -31,7 +31,6 @@ export default defineConfig({
       },
     },
   },
-  //base: "/maker-web/",
   plugins: [
     vue(),
     Components({
