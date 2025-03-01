@@ -1,4 +1,4 @@
-# maker-web
+# maker-community
 
 简体中文 | [English](./README.en-US.md)
 
